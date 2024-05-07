@@ -48,15 +48,15 @@
 
 % Format of the section titles
 \titleformat{\section}{
-\Large\bfseries}{}{0em}{}[\titlerule] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
+\huge\bfseries}{}{0em}{}[\titlerule] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
 \titlespacing{\section}{0pt}{12pt}{5pt} % Spacing around titles {<left spacing>}{<before spacing>}{<after spacing>}
 
 \titleformat{\subsection}{
-\large\bfseries\color{ryanGreen}}{}{0em}{}[\vspace{-0.1cm}] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
+\Large\bfseries\color{ryanGreen}}{}{0em}{}[\vspace{-0.1cm}] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
 \titlespacing{\subsection}{0pt}{12pt}{5pt} % Spacing around titles {<left spacing>}{<before spacing>}{<after spacing>}
 
 \titleformat{\subsubsection}{
-\normalsize\bfseries\color{ryanCyan}}{}{0em}{}[] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
+\large\bfseries\color{ryanCyan}}{}{0em}{}[] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
 \titlespacing{\subsubsection}{0pt}{12pt}{5pt} % Spacing around titles {<left spacing>}{<before spacing>}{<after spacing>}
 %----------------------------------------------------
 
@@ -200,11 +200,11 @@
 
 \newcommand{\simpleheader}[5]{
 \tikz[remember picture,overlay] {%
-\node[rectangle, fill=ryanHeadingBg, anchor=north, minimum width=\paperwidth, minimum height=3.5cm](header) at (current page.north){};%
+\node[rectangle, fill=ryanHeadingBg, anchor=north, minimum width=\paperwidth, minimum height=3.6cm](header) at (current page.north){};%
 \node[draw=none, align=left](name) at (header) {%
 {\Huge \color{ryanHeadingGreen}#1  }%
 };%
-\node[draw=none, below](description) at (name.south) {\color{ryanHeadingCyan}#2 \color{ryanHeadingPink}\hspace{0.15cm}||\hspace{0.15cm} \color{ryanHeadingCyan}#3 \color{ryanHeadingPink}\hspace{0.15cm}||\hspace{0.15cm} \color{ryanHeadingCyan}#4 \color{ryanHeadingPink}\hspace{0.15cm}||\hspace{0.15cm} \color{ryanHeadingCyan} #5};% 
+\node[draw=none, below](description) at (name.south) {\normalsize \color{ryanHeadingCyan}#2 \color{ryanHeadingPink}\hspace{0.15cm}||\hspace{0.15cm} \color{ryanHeadingCyan}#3 \color{ryanHeadingPink}\hspace{0.15cm}||\hspace{0.15cm} \color{ryanHeadingCyan}#4 \color{ryanHeadingPink}\hspace{0.15cm}||\hspace{0.15cm} \color{ryanHeadingCyan} #5};% 
 }%
 }
 

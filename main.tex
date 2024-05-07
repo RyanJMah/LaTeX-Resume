@@ -12,6 +12,12 @@
 
 \usepackage{enumitem}
 
+\renewcommand{\Huge}{\fontsize{30}{15}\selectfont}
+\renewcommand{\huge}{\fontsize{16}{15}\selectfont}
+\renewcommand{\Large}{\fontsize{12}{12}\selectfont}
+\renewcommand{\large}{\fontsize{11}{1}\selectfont}
+\renewcommand{\normalsize}{\fontsize{10.25}{1}\selectfont}
+
 
 %------------------------------------------------------------------ Variablen
 
@@ -24,7 +30,7 @@
 \pagestyle{empty}
 \begin{document}
 
-\setlist[itemize]{leftmargin=*}
+\setlist[itemize]{leftmargin=*, itemsep=0.2em}
 
 
 \thispagestyle{empty}
@@ -51,10 +57,10 @@
 
 % this has to be here so the paracols starts..
 \subsection*{}
-\vspace{4em}
+\vspace{2.1cm}
 
 \setlength{\columnsep}{1cm}
-\columnratio{0.275}
+\columnratio{0.285}
 \begin{paracol}{2}
 % \hbadness5000
 %\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
@@ -64,9 +70,14 @@
 % 0.9,0.9,0.9 -- 0.8,0.8,0.8
 
 
-\footnotesize
-{\setasidefontcolour
+% \renewcommand{\normalsize}{\fontsize{12}{10}\selectfont}
+
+
+% \footnotesize
+{
 \flushleft
+
+\setlength\columnsep{0.4cm} % This is the default columnsep for all pages
 
 % \bg{ryanHeadingBg}{white}{\textbf{Summary}}\\[0.5em]
 \section*{Summary}
@@ -78,6 +89,8 @@
     \item 4+ years of HW and PCB design experience
 \end{itemize}
 
+\vspace{0.05cm}
+
 \section*{Education}
 \subsection*{University of Waterloo}
 \subsubsection*{BASC. Electrical Engineering} \vspace{-0.075cm}
@@ -86,9 +99,11 @@
     \item Cummulative Average: 87\%
 \end{itemize}
 
+\vspace{0.05cm}
+
 \section*{\textbf{Skills}}
 \subsection*{Languages}
-\vspace{-0.4cm}
+\vspace{-0.2cm}
 \begin{multicols}{2}
     \begin{itemize}
         \item C
@@ -102,7 +117,7 @@
 \end{multicols}
 
 \subsection*{Technologies}
-\vspace{-0.4cm}
+\vspace{-0.2cm}
 \begin{multicols}{2}
     \begin{itemize}
         \item ARM
@@ -128,19 +143,19 @@
 \end{multicols}
 
 \subsection*{Tools}
-\vspace{-0.4cm}
+\vspace{-0.2cm}
 \begin{multicols}{2}
     \begin{itemize}
         \item git
+        \item Vitis
         \item Altium
         \item LTSpice
-        \item Vitis
     \end{itemize}
 \end{multicols}
 
 \subsection*{Lab}
-\vspace{-0.4cm}
-\begin{multicols}{2}
+\vspace{-0.2cm}
+\begin{multicols}{2}[]
     \begin{itemize}
         \item Spectrum Analyzer
         \item Soldering
@@ -153,7 +168,6 @@
 %-----------------------------------------------------------
 \switchcolumn
 
-\small
 \section*{Experience}
 
 \experienceHeading{Apple}
